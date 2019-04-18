@@ -15,3 +15,10 @@ cd skriptimine
 
 d) tekita lokaalne repo git systeemi jaoks antud kaustas
 git init
+
+remote seadistamine:
+a) git remote add nimi aadres
+git remote add rsha https://github.com/frankkarro/rsha
+
+b) git remote kontroll
+git remote -v
