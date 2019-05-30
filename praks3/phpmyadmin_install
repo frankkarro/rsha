@@ -1,0 +1,10 @@
+#!/bin/bash
+phpadm=$( dpkg --list | grep -c "phpmyadmin" ) #kontrollin kas on olemas
+if [ $phpadm -eq 0 ] #kui ei ole siis paigaldan
+then
+echo "installime phpmyadmin"
+apt install phpmyadmin -y
+else
+echo "phpmyadmin on installitud"  #vastasel juhul on installitud ja väljastan dpkg listi phpmyamidn kirje
+dpkg --list | grep "phpmyadmin"
+fi
