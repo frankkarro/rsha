@@ -1,8 +1,8 @@
 #!/bin/bash
 #
 #
-php=$(dpkg-query -W -f='${Status}' php 2>/dev/null | grep -c "ok installed") #kontrollib kas on olemas
-if [ $php -eq 0 ] # kui ei ole, siis paigaldab vajalikud paketid
+php=$(dpkg-query -W -f='${Status}' php 2>/dev/null | grep -c "ok installed")
+if [ $php -eq 0 ] # kui ei ole, siis paigaldab asjad
 then
         echo "PHP paigaldus"
         apt install -y dirmngr
@@ -17,6 +17,9 @@ then
 elif [ $php -eq 1 ]
 then
         echo "PHP on paigaldatud"
-        pause
-        systemctl status php
+        sleep 1
+        dpkg --list | grep "phpmyadmin"
 fi
+
+
+
