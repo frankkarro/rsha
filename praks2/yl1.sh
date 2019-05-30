@@ -12,7 +12,7 @@ cat /etc/shadow | grep "kasutajanimi"
 SKRIPT create user
 
 #!/bin/bash 
-echo -n "Enter an username:"
-read username
-useradd -s /bin/bash -m -d /home/$username "$username"
-echo "Done!"
+echo -n "Enter an username:" #annan kasutajalse sisendi koos teatega
+read username #loen mis kasutaja andis sisendiks
+useradd -s /bin/bash -m -d /home/$username "$username" #sisendist saadud infoga loon kasutaja koos skeletiga
+echo "Done!" #väljastan teate
