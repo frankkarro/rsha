@@ -20,6 +20,3 @@ then
         sleep 1
         dpkg --list | grep "phpmyadmin"
 fi
-
-
-
