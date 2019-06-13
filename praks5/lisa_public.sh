@@ -1,5 +1,5 @@
 #!/bin/bash
-#kui pole kasutajanime skripti järel siis annab infot kuidas skripti jooksutada
+#kui pole kasutajanime skripti järel siis annab süntaksi skripti jooksutamisekes
 if [ $# -ne 1 ]; then
         echo "Kasutusjuhend: $0 kasutajanimi"
 else    #kui kasutajat pole eelnevalt süsteemis olemas siis loob uue kasutaja (kasutajanimi:qwerty) paroolida
